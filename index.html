@@ -14,7 +14,72 @@
     />
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <div class="wether-app">
+        <header>
+          <div class="row">
+            <div class="col date-time">
+              <div class="now-date-time" id="currentlyDate">
+                Thursday, 26 January <br />
+                18:00
+              </div>
+            </div>
+            <div class="col search-city">
+              <form id="search-form">
+                <input
+                  type="text"
+                  placeholder="  Enter a city"
+                  class="search"
+                  id="seach-text-input"
+                />
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-outline-primary search-buttom"
+                />
+                <input
+                  type="submit"
+                  value="Current"
+                  class="btn btn-outline-primary"
+                  id="current-buttom"
+                />
+              </form>
+            </div>
+          </div>
+        </header>
+
+        <div class="row weather-today">
+          <div class="col city make_middle">
+            <h1>New York</h1>
+          </div>
+
+          <div class="col temperature-today-icon">
+            <i class="fa-solid fa-cloud">☁️</i>
+          </div>
+          <div class="col temperature-today make_middle">
+            <span id="temperatureToday">7</span>
+            <span class="units">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+          </div>
+          <div class="col indicators make_middle">
+            <div class="humidity">Humidity: <span id="humidity"></span>%</div>
+            <div class="wind">Wind: <span id="wind"></span>km/h</div>
+            <div class="description" id="description"></div>
+          </div>
+        </div>
+      </div>
+      <small>
+        <a
+          class="link-code"
+          target="_blank"
+          href="https://github.com/YuliiaYB/vanilla-weather-app"
+          >Open-source code
+        </a>
+        by Yuliia Yastremska
+      </small>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
