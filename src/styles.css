@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #005689;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+
+.date-time {
+  color: #007cb9;
+  text-shadow: rgba(0, 0, 255, 0.2) 1px 0 10px;
+}
+
+.search {
+  border-radius: 5px;
+  border: #005689;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, 0.2);
+  margin-right: 10px;
+}
+
+.temperature-today {
+  font-size: 70px;
+  color: #005689;
+}
+
+.units {
+  font-size: 20px;
+  color: #005689;
+  position: relative;
+  top: -40px;
+}
+
+.temperature-today-icon {
+  font-size: 100px;
+  color: white;
+}
+
+.indicators {
+  color: #007cb9;
+}
