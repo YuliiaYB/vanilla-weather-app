@@ -1,5 +1,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(148, 241, 246) 0%,
+    rgb(148, 189, 246) 100.7%
+  );
 }
 
 h1 {
@@ -14,9 +19,16 @@ h1 {
 .weather-app {
   max-width: 600px;
   margin: 30px auto;
+  margin-bottom: 10px;
   padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(148, 241, 246) 0%,
+    rgb(148, 189, 246) 100.7%
+  );
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, 0.2);
 }
 
 .date-time {
@@ -31,21 +43,38 @@ h1 {
   margin-right: 10px;
 }
 
-.temperature-today {
-  font-size: 70px;
-  color: #005689;
+.weather-today {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(148, 241, 246) 0%,
+    rgb(148, 189, 246) 100.7%
+  );
+  border-radius: 10px;
+  margin: 20px 10px;
+  border: 1px solid white;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, 0.2);
 }
 
-.units {
-  font-size: 20px;
-  color: #005689;
-  position: relative;
-  top: -40px;
+.make-middle {
+  margin-top: 25px;
 }
 
 .temperature-today-icon {
+  margin: 0px;
+  padding: 0px;
   font-size: 100px;
   color: white;
+}
+#temperatureToday {
+  color: #005689;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -35px;
 }
 
 .indicators {
