@@ -80,3 +80,7 @@ h1 {
 .indicators {
   color: #007cb9;
 }
+
+.description:first-letter {
+  text-transform: capitalize;
+}
