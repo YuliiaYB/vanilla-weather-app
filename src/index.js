@@ -37,6 +37,21 @@ function formatDate(timestemp) {
 
   return `${day}, ${date} ${month} <br />${hours}:${minutes}`;
 }
+
+function searchCity(city) {
+  let apiKey = "314f7f848c85494271461bad87b62591";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemp);
+}
+
+function searchSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#seach-text-input").value;
+  searchCity(city);
+}
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchSubmit);
+
 function showTemp(response) {
   document.querySelector(`#temperatureToday`).innerHTML = Math.round(
     response.data.main.temp
@@ -63,10 +78,20 @@ function showTemp(response) {
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
-  icon.setAttribute("alt", response.data.weather[0].description);
 }
-let apiKey = "314f7f848c85494271461bad87b62591";
-let city = "Paris";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(showTemp);
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "314f7f848c85494271461bad87b62591";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemp);
+}
+
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let currentLocationButton = document.querySelector(`#current-buttom`);
+currentLocationButton.addEventListener("click", getCurrentPosition);

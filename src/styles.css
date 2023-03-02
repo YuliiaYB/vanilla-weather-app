@@ -59,12 +59,6 @@ h1 {
   margin-top: 25px;
 }
 
-.temperature-today-icon {
-  margin: 0px;
-  padding: 0px;
-  font-size: 100px;
-  color: white;
-}
 #temperatureToday {
   color: #005689;
   font-size: 64px;
