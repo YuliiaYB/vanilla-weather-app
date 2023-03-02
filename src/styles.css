@@ -1,16 +1,12 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(148, 241, 246) 0%,
-    rgb(148, 189, 246) 100.7%
-  );
 }
 
 h1 {
   text-align: center;
   color: #005689;
   padding-top: 20px;
+  text-shadow: rgba(0, 0, 255, 0.2) 1px 0 10px;
 }
 a {
   text-decoration: none;
@@ -45,6 +41,7 @@ a {
   border: #005689;
   box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, 0.2);
   margin-right: 10px;
+  padding-right: 10px;
 }
 
 .weather-today {
