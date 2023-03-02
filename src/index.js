@@ -57,8 +57,16 @@ function showTemp(response) {
   document.querySelector("#currentlyDate").innerHTML = formatDate(
     response.data.dt * 1000
   );
+  document
+    .querySelector(`#temperature-today-icon`)
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  icon.setAttribute("alt", response.data.weather[0].description);
 }
 let apiKey = "314f7f848c85494271461bad87b62591";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=${apiKey}&units=metric`;
+let city = "Paris";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(showTemp);
